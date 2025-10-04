@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing the ball</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    @keyframes y-dir {
+        0%{inset-block-start: 370px;}
+        10%{ inset-block-start:70px }
+        20% {inset-block-start: 370px;}
+        30%{ inset-block-start: 150px}
+        40% {inset-block-start: 370px;}
+        50%{ inset-block-start: 230px}
+        60%{ inset-block-start: 370px;}
+        70%{ inset-block-start: 310px }
+        80%{ inset-block-start:370px;}
+        90%{ inset-block-start: 340px}
+        100%{inset-block-start:370px;}
+}
+
+    @keyframes x-dir {
+        from {}
+
+        to {
+            transform: translateX(967px);
+        }
+    }
+
+    .box {
+        block-size: 400px;
+        inline-size: 1000px;
+        border: 2mm solid black;
+        background-color: azure;
+        margin: 10px;
+
+    }
+
+    .ball {
+        margin: px;
+        border-radius: 7mm;
+        border: 2px solid black;
+        block-size: 30px;
+        inline-size: 30px;
+        background-color: aqua;
+        position: relative;
+        inset-block-start: 967px;
+        animation: x-dir 1s linear infinite forwards, y-dir 1s ease-in-out infinite forwards;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="ball">
+        </div>
+    </div>
+
+</body>
+
+</html>
