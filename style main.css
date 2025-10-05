@@ -14,7 +14,7 @@
     }
 }
 
-.main::before {
+.main::before ,nav::before{
     content: "";
     position: absolute;
     inset: 0;
@@ -35,7 +35,6 @@
     max-inline-size: 100%;
     position: relative;
 }
-
 .text {
     padding-block-start: 100px;
     position: relative;
@@ -324,6 +323,16 @@ nav {
 }
 .email2{
     inline-size: 380px
+}
+@media screen and (max-width:400px) {
+    .email2{
+        inline-size: 350px ;
+    }
+}
+@media screen and (max-width:370px) {
+    .email2{
+        inline-size: 320px ;
+    }
 }
 .l{
     font-size: 1rem;
